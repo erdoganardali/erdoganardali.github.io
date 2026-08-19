@@ -20,7 +20,20 @@
     --cini:#1E5C7A;
     --kum:#C6CDC6;
     --sis:#5D6763;
+    --kart:rgba(255,255,255,.55);
     --olcu: clamp(1rem, 0.6rem + 1.6vw, 1.125rem);
+    color-scheme:light dark;
+  }
+  /* Cihaz koyu temadaysa zemin ve yüzeyler koyu palete geçer */
+  @media (prefers-color-scheme:dark){
+    :root{
+      --porselen:#16171D;
+      --murekkep:#F3F4F6;
+      --cini:#7CC0DE;
+      --kum:#2E303A;
+      --sis:#9CA3AF;
+      --kart:rgba(255,255,255,.04);
+    }
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{-webkit-text-size-adjust:100%}
@@ -68,7 +81,7 @@
   .kartlar{display:grid;gap:1rem}
   .kart{
     border:1px solid var(--kum);border-radius:14px;
-    padding:1.25rem 1.25rem 1.4rem;background:rgba(255,255,255,.55);
+    padding:1.25rem 1.25rem 1.4rem;background:var(--kart);
   }
   .kart h3{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.0625rem;margin-bottom:.4rem}
   .kart p{color:var(--sis);font-size:.95rem;margin-bottom:.9rem}
@@ -83,7 +96,7 @@
   }
   .kart .ozet li::before{
     content:"";position:absolute;left:0;top:.6em;
-    width:5px;height:5px;border-radius:50%;background:var(--kum);
+    width:5px;height:5px;border-radius:50%;background:var(--cini);opacity:.55;
   }
   .kart .baglar{
     display:flex;gap:1.1rem;flex-wrap:wrap;
@@ -225,14 +238,12 @@
     <div class="iletisim">
       <div><span>E-posta</span><a href="mailto:yonetici@eardali.com">yonetici@eardali.com</a></div>
       <div><span>Web</span><a href="https://eardali.com">eardali.com</a></div>
-      <div><span>GitHub</span><a href="https://github.com/erdoganardali" target="_blank" rel="noopener">github.com/erdoganardali</a></div>
       <div><span>Konum</span><span style="color:var(--murekkep)">Türkiye</span></div>
     </div>
     <p class="not">
-      Bu site GitHub Pages üzerinde,
-      <a href="https://github.com/erdoganardali/erdoganardali.github.io" target="_blank" rel="noopener">erdoganardali/erdoganardali.github.io</a>
-      deposundan yayınlanıyor. Eski adres <strong style="color:var(--murekkep);font-weight:500">erdoganardali.github.io</strong>
-      bu alan adına yönlendirilir; her iki adresteki bağlantılar da çalışmaya devam eder.
+      Bu sitenin resmî adresi <strong style="color:var(--murekkep);font-weight:500">eardali.com</strong>'dur.
+      Daha önce kullanılan <strong style="color:var(--murekkep);font-weight:500">erdoganardali.github.io</strong>
+      adresi bu alan adına yönlendirilir; eski bağlantılar çalışmaya devam eder.
     </p>
   </section>
 
