@@ -4,7 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ERDOGAN ARDALI — EARDALI</title>
-<meta name="description" content="ERDOGAN ARDALI, EARDALI adı altında Android için oyun ve uygulamalar geliştiriyor.">
+<meta name="description" content="ERDOGAN ARDALI, EARDALI adı altında Android için uygulamalar geliştiriyor. KPSS Kariyer Kılavuzu ve ARDIEN FitCal.">
+<link rel="canonical" href="https://eardali.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eardali.com/">
+<meta property="og:title" content="ERDOGAN ARDALI — EARDALI">
+<meta property="og:description" content="Android için uygulamalar geliştiren bağımsız geliştirici. KPSS Kariyer Kılavuzu ve ARDIEN FitCal.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -60,12 +65,30 @@
   }
   .satirlar p{color:var(--sis);font-size:.95rem}
 
+  .kartlar{display:grid;gap:1rem}
   .kart{
     border:1px solid var(--kum);border-radius:14px;
     padding:1.25rem 1.25rem 1.4rem;background:rgba(255,255,255,.55);
   }
   .kart h3{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.0625rem;margin-bottom:.4rem}
   .kart p{color:var(--sis);font-size:.95rem;margin-bottom:.9rem}
+  .kart .kunye{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:.76rem;color:var(--cini);letter-spacing:.02em;
+    margin-bottom:.75rem;
+  }
+  .kart .ozet{list-style:none;display:grid;gap:.35rem;margin:0 0 1rem}
+  .kart .ozet li{
+    color:var(--sis);font-size:.92rem;padding-left:1rem;position:relative;
+  }
+  .kart .ozet li::before{
+    content:"";position:absolute;left:0;top:.6em;
+    width:5px;height:5px;border-radius:50%;background:var(--kum);
+  }
+  .kart .baglar{
+    display:flex;gap:1.1rem;flex-wrap:wrap;
+    font-size:.88rem;margin-bottom:0;
+  }
 
   a{color:var(--cini);text-underline-offset:3px;text-decoration-thickness:1px}
   a:hover{text-decoration:none}
@@ -74,6 +97,7 @@
   .iletisim{display:grid;gap:.65rem;font-family:"IBM Plex Mono",monospace;font-size:.9rem}
   .iletisim div{display:flex;gap:.75rem;flex-wrap:wrap}
   .iletisim span{color:var(--sis);min-width:5.5rem}
+  .not{color:var(--sis);font-size:.85rem;margin-top:1.4rem;max-width:34rem}
 
   footer{padding:2.5rem 0 3.5rem;font-size:.85rem;color:var(--sis);
     display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between}
@@ -113,8 +137,8 @@
     <p class="etiket ac">Bağımsız geliştirici</p>
     <h1 class="ac">ERDOGAN ARDALI</h1>
     <p class="giris ac">
-      <strong>EARDALI</strong> adı altında Android için oyun ve uygulamalar geliştiriyorum.
-      Tasarımdan yayına kadar tüm süreci kendim yürütüyorum.
+      <strong>EARDALI</strong> adı altında Android için uygulamalar geliştiriyorum.
+      Tasarımdan sunucuya, yayından desteğe kadar tüm süreci kendim yürütüyorum.
     </p>
   </header>
 
@@ -122,9 +146,58 @@
     <p class="etiket">Durum</p>
     <h2>Şu anda ne üzerinde çalışıyorum</h2>
     <p style="color:var(--sis);max-width:34rem">
-      Google Play geliştirici hesabımı kuruyorum ve ilk sürümü yayına hazırlıyorum.
-      Yayınlanan uygulamalar burada listelenecek.
+      İki uygulama geliştiriyorum: <strong style="color:var(--murekkep);font-weight:500">KPSS Kariyer Kılavuzu</strong>
+      ve <strong style="color:var(--murekkep);font-weight:500">ARDIEN FitCal</strong>.
+      İkisi de Google Play'de kapalı test aşamasında. Genel yayına çıktıklarında
+      mağaza bağlantıları bu sayfada olacak.
     </p>
+  </section>
+
+  <section>
+    <p class="etiket">Projeler</p>
+    <h2>Yaptığım işler</h2>
+    <div class="kartlar">
+
+      <div class="kart">
+        <h3>KPSS Kariyer Kılavuzu</h3>
+        <p class="kunye">Android · com.kariyerkilavuzu.app · Kapalı test</p>
+        <p>KPSS'ye hazırlananlar için soru bankası ve deneme sınavı uygulaması.
+           Soru havuzundan deneme oluşturulur; çözülen sorular, sonuçlar ve
+           konu bazlı ilerleme takip edilir.</p>
+        <ul class="ozet">
+          <li>Deneme sınavı ve konu konu soru çözümü</li>
+          <li>Hap bilgiler: ünite ünite özet bilgi kartları</li>
+          <li>Tercih robotu ile bölüme uygun kadro filtreleme</li>
+          <li>Arkadaş ekleme ve düello ile karşılıklı yarışma</li>
+          <li>Üyeliksiz misafir girişiyle hemen başlama</li>
+        </ul>
+        <p class="kunye" style="margin-bottom:.9rem">Flutter · Node.js · PostgreSQL</p>
+        <p class="baglar">
+          <a href="gizlilik.html">Gizlilik</a>
+          <a href="kullanim-kosullari.html">Kullanım koşulları</a>
+          <a href="hesap-silme.html">Hesap silme</a>
+        </p>
+      </div>
+
+      <div class="kart">
+        <h3>ARDIEN FitCal</h3>
+        <p class="kunye">Android · com.ardien.fitcal · Kapalı test</p>
+        <p>Antrenman, kalori ve gelişim takibini tek yerde toplayan spor uygulaması.
+           Öğünler fotoğraftan analiz edilir, veriler Health Connect ile eşitlenir.</p>
+        <ul class="ozet">
+          <li>Antrenman planlama ve ilerleme kaydı</li>
+          <li>Fotoğraftan öğün ve kalori analizi</li>
+          <li>Health Connect desteğiyle sağlık verisi eşitleme</li>
+        </ul>
+        <p class="baglar">
+          <a href="ardien-fitcal/">Tanıtım sayfası →</a>
+          <a href="ardien-fitcal/privacy.html">Gizlilik</a>
+          <a href="ardien-fitcal/terms.html">Kullanım koşulları</a>
+          <a href="ardien-fitcal/account-deletion.html">Hesap silme</a>
+        </p>
+      </div>
+
+    </div>
   </section>
 
   <section>
@@ -132,28 +205,18 @@
     <h2>Ne geliştiriyorum</h2>
     <ul class="satirlar">
       <li>
-        <h3>Mobil oyunlar</h3>
-        <p>Android için tek başıma geliştirdiğim küçük ölçekli oyunlar.</p>
+        <h3>Mobil uygulamalar</h3>
+        <p>Flutter ve React Native ile Android için geliştirdiğim uygulamalar.</p>
       </li>
       <li>
-        <h3>Yardımcı uygulamalar</h3>
-        <p>Günlük işleri kolaylaştıran, sade ve reklamsız araçlar.</p>
+        <h3>Sunucu tarafı</h3>
+        <p>Node.js ve PostgreSQL ile yazdığım, uygulamaları besleyen API'ler.</p>
       </li>
       <li>
-        <h3>Web uygulamaları</h3>
-        <p>React ile geliştirip Vercel üzerinde yayınladığım arayüzler.</p>
+        <h3>Web arayüzleri</h3>
+        <p>React ile geliştirdiğim yönetim panelleri ve tanıtım sayfaları.</p>
       </li>
     </ul>
-  </section>
-
-  <section>
-    <p class="etiket">Projeler</p>
-    <h2>Yayında olanlar</h2>
-    <div class="kart">
-      <h3>KPSS Kariyer Kılavuzu</h3>
-      <p>KPSS'ye hazırlananlar için soru bankası ve deneme sınavı uygulaması. Soru havuzundan deneme oluşturuluyor, çözülen sorular ve sonuçlar takip ediliyor. Mobil tarafı Flutter, web arayüzü React ile geliştirildi.</p>
-      <a href="https://client-blond-eight-40.vercel.app" target="_blank" rel="noopener">Projeyi aç →</a>
-    </div>
   </section>
 
   <section>
@@ -161,9 +224,16 @@
     <h2>Bana ulaşın</h2>
     <div class="iletisim">
       <div><span>E-posta</span><a href="mailto:yonetici@eardali.com">yonetici@eardali.com</a></div>
+      <div><span>Web</span><a href="https://eardali.com">eardali.com</a></div>
       <div><span>GitHub</span><a href="https://github.com/erdoganardali" target="_blank" rel="noopener">github.com/erdoganardali</a></div>
       <div><span>Konum</span><span style="color:var(--murekkep)">Türkiye</span></div>
     </div>
+    <p class="not">
+      Bu site GitHub Pages üzerinde,
+      <a href="https://github.com/erdoganardali/erdoganardali.github.io" target="_blank" rel="noopener">erdoganardali/erdoganardali.github.io</a>
+      deposundan yayınlanıyor. Eski adres <strong style="color:var(--murekkep);font-weight:500">erdoganardali.github.io</strong>
+      bu alan adına yönlendirilir; her iki adresteki bağlantılar da çalışmaya devam eder.
+    </p>
   </section>
 
   <footer>
