@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası — Ezan Rehberi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--porselen:#171713;--murekkep:#F4F0E6;--cini:#DFFF3F;--kum:#424238;--sis:#AAA99F;--kart:rgba(255,255,255,.045);color-scheme:dark}
+  @media (prefers-color-scheme:dark){
+    :root{--porselen:#171713;--murekkep:#F4F0E6;--cini:#DFFF3F;--kum:#424238;--sis:#AAA99F;--kart:rgba(255,255,255,.045)}
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--porselen);color:var(--murekkep);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.65;padding:0 1.5rem}
+  .kapsam{max-width:40rem;margin:0 auto;padding:3.5rem 0 4rem}
+  .etiket{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--cini)}
+  h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(1.9rem,1.3rem + 2.4vw,2.6rem);
+    line-height:1.1;letter-spacing:-.02em;margin:.6rem 0 .4rem}
+  .tarih{font-family:"IBM Plex Mono",monospace;font-size:.85rem;color:var(--sis);margin-bottom:2.5rem}
+  h2{font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:1.2rem;
+    margin:2.25rem 0 .6rem;letter-spacing:-.01em}
+  p,li{color:var(--sis);margin-bottom:.75rem}
+  ul{padding-left:1.15rem}
+  strong{color:var(--murekkep);font-weight:500}
+  a{color:var(--cini);text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--cini);outline-offset:3px;border-radius:3px}
+  hr{border:0;border-top:1px solid var(--kum);margin:3rem 0 1.5rem}
+  .geri{font-size:.9rem}
+  .not{background:var(--kart);border:1px solid var(--kum);border-radius:12px;
+    padding:1rem 1.15rem;margin:1rem 0}
+</style>
+</head>
+<body>
+<div class="kapsam">
+
+  <p class="etiket">EARDALI · Ezan Rehberi</p>
+  <h1>Gizlilik Politikası</h1>
+  <p class="tarih">Son güncelleme: 30 Ekim 2026</p>
+
+  <p>
+    Bu gizlilik politikası, ERDOGAN ARDALI (“EARDALI”, “biz”) tarafından geliştirilen
+    <strong>Ezan Rehberi</strong> adlı mobil uygulamanın (“Uygulama”) verilerinizi nasıl işlediğini açıklar.
+  </p>
+
+  <div class="not">
+    <p style="margin:0"><strong>Kısaca:</strong> Hesap açmanız gerekmez; ad, e-posta veya telefon
+    numarası istemeyiz. Konumunuz yalnızca namaz vakitlerini, kıbleyi ve hava durumunu hesaplamak
+    için kullanılır ve sunucumuzda saklanmaz. Reklam, analiz aracı veya takip yazılımı yoktur.
+    Sunucumuzda tutulan tek şey, ortak hatimlere katıldığınızda oluşan anonim hatim kayıtlarıdır.</p>
+  </div>
+
+  <h2>1. Konum</h2>
+  <p>
+    İzin verirseniz Uygulama cihazınızın konumunu alır ve şu işler için kullanır:
+  </p>
+  <ul>
+    <li>Namaz vakitlerini hesaplamak: koordinatlar vakit hesaplama servisine
+      (<strong>AlAdhan</strong>, api.aladhan.com) gönderilir.</li>
+    <li>Hava durumunu göstermek: koordinatlar <strong>Open-Meteo</strong>’ya (api.open-meteo.com) gönderilir.</li>
+    <li>Şehir adını göstermek: koordinatlar cihazın işletim sisteminin konum servisiyle (Apple / Google) adrese çevrilir.</li>
+    <li>Kıble yönü ve Kâbe’ye uzaklık: tamamen cihazınızda hesaplanır.</li>
+  </ul>
+  <p>
+    Bu istekler anlık olarak yanıtlanır; konumunuz EARDALI sunucularında saklanmaz ve
+    kimliğinizle ilişkilendirilmez.
+  </p>
+
+  <h2>2. Ortak hatim</h2>
+  <p>
+    Ortak hatim özelliğini kullandığınızda Uygulama sizi Google <strong>Firebase</strong> üzerinde
+    <strong>anonim</strong> olarak oturum açtırır. Bu oturum için ad, e-posta veya telefon numarası
+    istenmez; size rastgele bir kimlik atanır. Oluşturduğunuz hatimler ve aldığınız cüzler bu
+    rastgele kimlikle ve “Okuyucu AB12C” biçiminde otomatik bir takma adla Firebase Cloud Firestore’da
+    (Avrupa bölgesi) saklanır. Hatim bağlantısına sahip olan herkes hatmi ve cüzlerin durumunu görebilir.
+  </p>
+
+  <h2>3. İçerik servisleri</h2>
+  <p>
+    Kur’an metni, meal ve tilavet sesleri <strong>AlQuran Cloud</strong> ve <strong>Islamic Network</strong>
+    üzerinden, radyo yayınları <strong>mp3quran.net</strong> üzerinden alınır. Bu isteklerde kişisel
+    bilgi gönderilmez. İnternetin doğası gereği bu servisler isteği yanıtlamak için IP adresinizi görür.
+  </p>
+
+  <h2>4. Cihazınızda saklanan veriler</h2>
+  <p>
+    Ayarlarınız, seçtiğiniz şehir, bildirim tercihleriniz, okuma kaldığınız yer ve kişisel hatim
+    ilerlemeniz <strong>yalnızca cihazınızda</strong> saklanır ve bize iletilmez. Namaz vakti
+    hatırlatmaları cihazınızda planlanan yerel bildirimlerdir.
+  </p>
+
+  <h2>5. Verilerinizi silme</h2>
+  <p>
+    Uygulamayı kaldırdığınızda cihazdaki tüm veriler silinir. Oluşturduğunuz ortak hatimlerin
+    ve sunucudaki anonim kaydınızın silinmesini isterseniz aşağıdaki adrese yazmanız yeterlidir;
+    talebiniz 30 gün içinde yerine getirilir.
+  </p>
+
+  <h2>6. Satın alma ve reklamlar</h2>
+  <p>
+    Uygulamanın mevcut sürümünde reklam ve ücretli içerik bulunmaz. İleride eklenirse bu politika
+    önceden güncellenir; ödemeler yalnızca App Store veya Google Play üzerinden yapılır ve kart
+    bilgileriniz bize ulaşmaz.
+  </p>
+
+  <h2>7. Çocukların gizliliği</h2>
+  <p>
+    Uygulama kimseden, dolayısıyla 13 yaşından küçük çocuklardan da kimliği belirleyen kişisel veri toplamaz.
+  </p>
+
+  <h2>8. Politikadaki değişiklikler</h2>
+  <p>
+    Bu politika zaman zaman güncellenebilir. Değişiklikler bu sayfada yayınlanır ve
+    yukarıdaki “son güncelleme” tarihi yenilenir.
+  </p>
+
+  <h2>9. İletişim</h2>
+  <p>
+    Gizlilikle ilgili tüm soru ve talepleriniz için:
+    <a href="mailto:yonetici@eardali.com">yonetici@eardali.com</a>
+  </p>
+
+  <hr>
+
+  <p class="etiket" id="en">English</p>
+  <h2 style="margin-top:.6rem">Privacy Policy — Ezan Rehberi</h2>
+  <p>
+    <strong>Ezan Rehberi</strong>, developed by ERDOGAN ARDALI (EARDALI), requires no account and never
+    asks for your name, email or phone number. It has no ads, analytics or third-party tracking.
+    If you grant permission, your location is used only to calculate prayer times (sent to AlAdhan),
+    show the weather (sent to Open-Meteo), resolve your city name (via the operating system’s geocoder)
+    and compute the qibla direction on your device. Location is not stored on our servers.
+  </p>
+  <p>
+    The shared khatm feature signs you in anonymously with Google Firebase. Khatms you create and juz
+    you take are stored in Cloud Firestore (Europe) with a random ID and an automatic nickname; anyone
+    with the khatm link can see its progress. Quran text, audio and radio streams come from AlQuran Cloud,
+    Islamic Network and mp3quran.net without any personal data. Settings and personal progress stay on
+    your device. Uninstall the app to delete local data; email us to delete your khatms and anonymous server record (handled within 30 days).
+    Contact: <a href="mailto:yonetici@eardali.com">yonetici@eardali.com</a>
+  </p>
+
+  <hr>
+  <p class="geri">
+    <a href="../index.html">← Ana sayfa</a>
+  </p>
+
+</div>
+</body>
+</html>
